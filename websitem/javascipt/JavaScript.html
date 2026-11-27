@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Nedir</title>
+    <script src="js/site.js"></script>
+
+    <script>
+
+        function internalMesaj() {
+            alert('bu kod internal yanii head kisminda yazildi');
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>Javascript Nedir</h1>
+    <p id="mesajKutusu" style="color:red"; font-size:x-large;></p>
+    <hr />
+    <p>Javascript html sayfaları ile birlikte kullanılan kodlama dilidir. HTML nin yetersiz kaldığı durumlarda kodla işlem yapılmak istendiğinde kullanılabilir.</p>
+   
+    <h3>JS yazım şekilleri </h3>
+    <ul>
+        <li onclick="window.alert('satir ici kod cagirildi');">İnline (satir ici) kod yazımı. - Bu maddeye tıklayınız.</li>
+
+        <li onclick="internalMesaj();">internal (sayfa ici-head)-tıklayınız</li>
+        <li onclick="Mesaj();">External (harici .js dosyasından kod cagirisi) bu kod site.js de yazıldı ve oradan cagirildi -tıklayınız</li>
+
+    </ul>
+
+    <h3>Output - çıktı </h3>
+    <ul>
+        <li> alert('mesaj'); - alert komutu pop-up mesaj çıktısı üretir. </li>
+        <li>document.write('ifade'); - bodyye mesaj yazar. <script>document.write('bu mesaj dcument.write(); komutu ile yazıldı');</script> </li>
+        <li> console.log('ifade'); - developer tools içindeki konsol ekranına bilgi yazmak içiin kullanılır genellikle geliştirme aşamasında kullanılır. <script> console.log('bu mesaj console.log(); komutu ile yazıldı');</script> konsol ekranını kontrol ediniz </li>
+        <li> sayfa içindeki bir elemente içerik basmak. <button onclick="document.getElementById('mesajKutusu').innerHTML = '* Dikkat bu metin sonradan eklendi.';" > Tıkla </button> </li>
+    </ul>
+
+    <h3>Input - girdi</h3>
+
+    <ul>
+        <li onclick="let x = prompt('Lütfen adınızı giriniz:', 'taha'); alert(x);"> prompt('mesaj','default deger') komutu ilr değer almak için Tıkla</li>
+        <li> sayfa içindeki bir elementin değerini almak. <button onclick="let deger = document.getElementById('mesajKutusu').innerHTML = alert(deger);"> Tıkla </button> </li>
+    </ul>
+    
+   
+
+
+</body>
+</html>
